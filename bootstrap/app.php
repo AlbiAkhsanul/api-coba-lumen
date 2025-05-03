@@ -94,7 +94,9 @@ $app->configure('app');
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
-
+$app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
+$app->alias('JWTAuth', Tymon\JWTAuth\Facades\JWTAuth::class);
+$app->alias('JWTFactory', Tymon\JWTAuth\Facades\JWTFactory::class);
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes

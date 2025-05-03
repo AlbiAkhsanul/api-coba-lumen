@@ -22,3 +22,8 @@ $router->post('/student/create', 'StudentController@create');
 $router->get('/student/{id}', 'StudentController@show');
 $router->put('/student/update/{id}', 'StudentController@update');
 $router->delete('/student/delete/{id}', 'StudentController@delete');
+
+$router->post('auth/login', 'AuthController@login');
+$router->post('auth/logout', 'AuthController@logout');
+$router->post('auth/refresh', 'AuthController@refresh');
+$router->post('auth/info', 'AuthController@user_info');
