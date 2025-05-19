@@ -79,6 +79,9 @@ $app->configure('app');
 // $app->routeMiddleware([
 //     'auth' => App\Http\Middleware\Authenticate::class,
 // ]);
+$app->middleware([
+    App\Http\Middleware\CorsMiddleware::class
+]);
 
 /*
 |--------------------------------------------------------------------------
@@ -97,6 +100,7 @@ $app->configure('app');
 $app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
 $app->alias('JWTAuth', Tymon\JWTAuth\Facades\JWTAuth::class);
 $app->alias('JWTFactory', Tymon\JWTAuth\Facades\JWTFactory::class);
+$app->register(App\Providers\CatchAllOptionsRequestsProvider::class);
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
