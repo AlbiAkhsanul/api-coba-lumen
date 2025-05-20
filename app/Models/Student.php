@@ -18,7 +18,7 @@ class Student extends Model implements AuthenticatableContract, AuthorizableCont
      *
      * @var string[]
      */
-    protected $table = 'Student';
+    protected $table = 'student';
     protected $fillable = [
         'name',
         'npm',
